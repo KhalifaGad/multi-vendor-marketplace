@@ -16,10 +16,9 @@ input UserCreateInput {
 }
 
 extend type Query {
-    userHello: String
     userFindAll: [User]
 }
 
 extend type Mutation {
-    userCreate(input: UserCreateInput!): String
+    userCreate(input: UserCreateInput!): User!
 }

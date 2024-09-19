@@ -28,23 +28,13 @@ public class UserController {
     }
 
     @MutationMapping("userCreate")
-    public String createUser(@Valid @Argument CreateUserDTO input) {
-        System.out.println(input.firstName());
-        System.out.println(input.lastName());
-        System.out.println(input.email());
-        System.out.println(input.phone());
-        System.out.println(input.dateOfBirth());
-        return "Valid User";
+    public User createUser(@Valid @Argument CreateUserDTO input) {
+        return userService.createUser(input);
     }
 
     @QueryMapping
     public String hello() {
         return "Hello Graphql World!";
-    }
-
-    @QueryMapping("userHello")
-    public String helloUser() {
-        return this.userService.hello();
     }
 
     @QueryMapping("userFindAll")

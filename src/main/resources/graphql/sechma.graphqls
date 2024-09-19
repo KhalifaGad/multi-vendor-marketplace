@@ -7,9 +7,11 @@ input EchoInput {
 }
 
 type Query {
+    #    adding hello query here to be able to extend Query type in the user.graphqls
     hello: String
 }
 
 type Mutation {
+    #    adding echo mutation here to be able to extend Mutation type in the user.graphqls
     echo(payload: EchoInput!): String
 }

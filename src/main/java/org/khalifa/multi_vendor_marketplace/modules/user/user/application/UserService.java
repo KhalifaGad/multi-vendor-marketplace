@@ -1,7 +1,10 @@
 package org.khalifa.multi_vendor_marketplace.modules.user.user.application;
 
+import org.khalifa.multi_vendor_marketplace.modules.user.user.application.payload.CreateUserPayload;
 import org.khalifa.multi_vendor_marketplace.modules.user.user.application.portal.UserRepository;
 import org.khalifa.multi_vendor_marketplace.modules.user.user.domain.User;
+import org.khalifa.multi_vendor_marketplace.modules.user.user.domain.factory.NewUserFactoryParams;
+import org.khalifa.multi_vendor_marketplace.modules.user.user.domain.factory.UserFactory;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -14,11 +17,20 @@ public class UserService {
         this.userRepository = userRepository;
     }
 
-    public String hello() {
-        return "Hello Graphql World! from UserService";
-    }
-
     public List<User> findAll() {
         return userRepository.findAll();
+    }
+
+    public User createUser(CreateUserPayload payload) {
+        var newUser = UserFactory.create(
+                new NewUserFactoryParams(
+                        payload.firstName(),
+                        payload.lastName(),
+                        payload.email(),
+                        payload.phone(),
+                        payload.dateOfBirth()
+                )
+        );
+        return userRepository.save(newUser);
     }
 }

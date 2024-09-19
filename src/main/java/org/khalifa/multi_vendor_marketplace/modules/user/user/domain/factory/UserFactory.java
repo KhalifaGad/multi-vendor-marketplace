@@ -5,12 +5,15 @@ import org.khalifa.multi_vendor_marketplace.modules.user.user.domain.User;
 import java.util.UUID;
 
 public class UserFactory {
-    User create(NewUserFactoryParams params) {
+    private UserFactory() {
+    }
+    
+    public static User create(NewUserFactoryParams params) {
         UUID id = UUID.randomUUID();
         return new User(id, params.firstName(), params.lastName(), params.email(), params.phone(), params.dateOfBirth());
     }
 
-    User create(ExistingUserFactoryParams params) {
+    public static User create(ExistingUserFactoryParams params) {
         return new User(params.id(), params.firstName(), params.lastName(), params.email(), params.phone(), params.dateOfBirth());
     }
 }

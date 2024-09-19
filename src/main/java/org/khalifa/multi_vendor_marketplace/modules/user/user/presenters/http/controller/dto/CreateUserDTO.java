@@ -1,6 +1,7 @@
 package org.khalifa.multi_vendor_marketplace.modules.user.user.presenters.http.controller.dto;
 
 import jakarta.validation.constraints.*;
+import org.khalifa.multi_vendor_marketplace.modules.user.user.application.payload.CreateUserPayload;
 
 import java.time.LocalDate;
 
@@ -23,5 +24,5 @@ public record CreateUserDTO(
         @NotNull
         @Past
         LocalDate dateOfBirth
-) {
+) implements CreateUserPayload {
 }
