@@ -1,0 +1,15 @@
+scalar DateTime @specifiedBy(url: "https://scalars.graphql.org/andimarek/date-time.html")
+scalar Date @specifiedBy(url:"https://tools.ietf.org/html/rfc3339")
+scalar UUID @specifiedBy(url:"https://tools.ietf.org/html/rfc4122")
+
+input EchoInput {
+    message: String!
+}
+
+type Query {
+    hello: String
+}
+
+type Mutation {
+    echo(payload: EchoInput!): String
+}

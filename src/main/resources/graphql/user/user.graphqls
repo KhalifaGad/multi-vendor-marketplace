@@ -1,0 +1,25 @@
+type User {
+    id: ID!
+    firstName: String
+    lastName: String
+    email: String
+    phone: String
+    dateOfBirth: Date
+}
+
+input UserCreateInput {
+    firstName: String!
+    lastName: String!
+    email: String
+    phone: String!
+    dateOfBirth: Date!
+}
+
+extend type Query {
+    userHello: String
+    userFindAll: [User]
+}
+
+extend type Mutation {
+    userCreate(input: UserCreateInput!): String
+}
