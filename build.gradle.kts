@@ -91,7 +91,7 @@ tasks.register<JavaExec>("runServer") {
 
 tasks.register<JavaExec>("runWorker") {
     group = "application"
-    description = "Run the application in server mode"
+    description = "Run the application in worker mode"
     classpath = sourceSets.main.get().runtimeClasspath
     mainClass.set("org.khalifa.multi_vendor_marketplace.MultiVendorMarketplaceApplication")
     args = listOf("--spring.profiles.active=worker")
