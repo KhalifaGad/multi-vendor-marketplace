@@ -60,18 +60,39 @@ dependencyManagement {
     }
 }
 
-tasks.generateJava {
-    schemaPaths.add("${projectDir}/src/main/resources/graphql-client")
-    packageName = "org.khalifa.multi_vendor_marketplace.codegen"
-    generateClient = true
-}
-
 hibernate {
     enhancement {
         enableAssociationManagement = true
     }
 }
 
+tasks.generateJava {
+    schemaPaths.add("${projectDir}/src/main/resources/graphql-client")
+    packageName = "org.khalifa.multi_vendor_marketplace.codegen"
+    generateClient = true
+}
+
+tasks.withType<JavaCompile> {
+    sourceCompatibility = JavaVersion.VERSION_22.toString()
+    targetCompatibility = JavaVersion.VERSION_22.toString()
+}
+
 tasks.withType<Test> {
     useJUnitPlatform()
+}
+
+tasks.register<JavaExec>("runServer") {
+    group = "application"
+    description = "Run the application in server mode"
+    classpath = sourceSets.main.get().runtimeClasspath
+    mainClass.set("org.khalifa.multi_vendor_marketplace.MultiVendorMarketplaceApplication")
+    args = listOf("--spring.profiles.active=server")
+}
+
+tasks.register<JavaExec>("runWorker") {
+    group = "application"
+    description = "Run the application in server mode"
+    classpath = sourceSets.main.get().runtimeClasspath
+    mainClass.set("org.khalifa.multi_vendor_marketplace.MultiVendorMarketplaceApplication")
+    args = listOf("--spring.profiles.active=worker")
 }
