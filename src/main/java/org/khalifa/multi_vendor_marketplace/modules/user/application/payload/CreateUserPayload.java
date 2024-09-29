@@ -1,4 +1,4 @@
-package org.khalifa.multi_vendor_marketplace.modules.user.user.application.payload;
+package org.khalifa.multi_vendor_marketplace.modules.user.application.payload;
 
 import java.time.LocalDate;
 

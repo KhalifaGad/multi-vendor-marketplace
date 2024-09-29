@@ -1,8 +1,8 @@
-package org.khalifa.multi_vendor_marketplace.modules.user.user.infrastructure.persistence.postgres.repository;
+package org.khalifa.multi_vendor_marketplace.modules.user.infrastructure.persistence.postgres.repository;
 
-import org.khalifa.multi_vendor_marketplace.modules.user.user.application.portal.UserRepository;
-import org.khalifa.multi_vendor_marketplace.modules.user.user.domain.User;
-import org.khalifa.multi_vendor_marketplace.modules.user.user.infrastructure.persistence.postgres.mapper.UserMapper;
+import org.khalifa.multi_vendor_marketplace.modules.user.application.portal.UserRepository;
+import org.khalifa.multi_vendor_marketplace.modules.user.domain.User;
+import org.khalifa.multi_vendor_marketplace.modules.user.infrastructure.persistence.postgres.mapper.UserMapper;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;

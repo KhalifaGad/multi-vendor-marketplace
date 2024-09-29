@@ -1,10 +1,10 @@
-package org.khalifa.multi_vendor_marketplace.modules.user.user.presenters.http.controller;
+package org.khalifa.multi_vendor_marketplace.modules.user.presenter.http.controller;
 
 import jakarta.validation.Valid;
-import org.khalifa.multi_vendor_marketplace.modules.user.user.application.UserService;
-import org.khalifa.multi_vendor_marketplace.modules.user.user.domain.User;
-import org.khalifa.multi_vendor_marketplace.modules.user.user.presenters.http.controller.dto.CreateUserDTO;
-import org.khalifa.multi_vendor_marketplace.modules.user.user.presenters.http.controller.dto.EchoInputDTO;
+import org.khalifa.multi_vendor_marketplace.modules.user.application.UserService;
+import org.khalifa.multi_vendor_marketplace.modules.user.domain.User;
+import org.khalifa.multi_vendor_marketplace.modules.user.presenter.http.controller.dto.CreateUserDTO;
+import org.khalifa.multi_vendor_marketplace.modules.user.presenter.http.controller.dto.EchoInputDTO;
 import org.springframework.graphql.data.method.annotation.Argument;
 import org.springframework.graphql.data.method.annotation.MutationMapping;
 import org.springframework.graphql.data.method.annotation.QueryMapping;

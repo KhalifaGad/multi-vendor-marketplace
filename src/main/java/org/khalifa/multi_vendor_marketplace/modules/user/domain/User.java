@@ -1,4 +1,4 @@
-package org.khalifa.multi_vendor_marketplace.modules.user.user.domain;
+package org.khalifa.multi_vendor_marketplace.modules.user.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

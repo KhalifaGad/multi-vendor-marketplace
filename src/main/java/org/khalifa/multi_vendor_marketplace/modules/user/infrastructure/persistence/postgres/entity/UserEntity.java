@@ -1,4 +1,4 @@
-package org.khalifa.multi_vendor_marketplace.modules.user.user.infrastructure.persistence.postgres.entity;
+package org.khalifa.multi_vendor_marketplace.modules.user.infrastructure.persistence.postgres.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

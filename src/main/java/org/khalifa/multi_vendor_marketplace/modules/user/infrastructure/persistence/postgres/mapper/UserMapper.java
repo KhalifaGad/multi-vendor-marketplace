@@ -1,9 +1,9 @@
-package org.khalifa.multi_vendor_marketplace.modules.user.user.infrastructure.persistence.postgres.mapper;
+package org.khalifa.multi_vendor_marketplace.modules.user.infrastructure.persistence.postgres.mapper;
 
-import org.khalifa.multi_vendor_marketplace.modules.user.user.domain.User;
-import org.khalifa.multi_vendor_marketplace.modules.user.user.domain.factory.ExistingUserFactoryParams;
-import org.khalifa.multi_vendor_marketplace.modules.user.user.domain.factory.UserFactory;
-import org.khalifa.multi_vendor_marketplace.modules.user.user.infrastructure.persistence.postgres.entity.UserEntity;
+import org.khalifa.multi_vendor_marketplace.modules.user.domain.User;
+import org.khalifa.multi_vendor_marketplace.modules.user.domain.factory.ExistingUserFactoryParams;
+import org.khalifa.multi_vendor_marketplace.modules.user.domain.factory.UserFactory;
+import org.khalifa.multi_vendor_marketplace.modules.user.infrastructure.persistence.postgres.entity.UserEntity;
 
 public class UserMapper {
     private UserMapper() {

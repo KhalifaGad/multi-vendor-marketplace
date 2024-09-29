@@ -1,7 +1,7 @@
-package org.khalifa.multi_vendor_marketplace.modules.user.user.presenters.http.controller.dto;
+package org.khalifa.multi_vendor_marketplace.modules.user.presenter.http.controller.dto;
 
 import jakarta.validation.constraints.*;
-import org.khalifa.multi_vendor_marketplace.modules.user.user.application.payload.CreateUserPayload;
+import org.khalifa.multi_vendor_marketplace.modules.user.application.payload.CreateUserPayload;
 
 import java.time.LocalDate;
 

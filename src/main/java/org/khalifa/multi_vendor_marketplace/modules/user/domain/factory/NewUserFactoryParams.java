@@ -1,10 +1,8 @@
-package org.khalifa.multi_vendor_marketplace.modules.user.user.domain.factory;
+package org.khalifa.multi_vendor_marketplace.modules.user.domain.factory;
 
 import java.time.LocalDate;
-import java.util.UUID;
 
-public record ExistingUserFactoryParams(
-        UUID id,
+public record NewUserFactoryParams(
         String firstName,
         String lastName,
         String email,
@@ -12,4 +10,3 @@ public record ExistingUserFactoryParams(
         LocalDate dateOfBirth
 ) {
 }
-

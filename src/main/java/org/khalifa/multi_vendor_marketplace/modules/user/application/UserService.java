@@ -1,10 +1,10 @@
-package org.khalifa.multi_vendor_marketplace.modules.user.user.application;
+package org.khalifa.multi_vendor_marketplace.modules.user.application;
 
-import org.khalifa.multi_vendor_marketplace.modules.user.user.application.payload.CreateUserPayload;
-import org.khalifa.multi_vendor_marketplace.modules.user.user.application.portal.UserRepository;
-import org.khalifa.multi_vendor_marketplace.modules.user.user.domain.User;
-import org.khalifa.multi_vendor_marketplace.modules.user.user.domain.factory.NewUserFactoryParams;
-import org.khalifa.multi_vendor_marketplace.modules.user.user.domain.factory.UserFactory;
+import org.khalifa.multi_vendor_marketplace.modules.user.application.payload.CreateUserPayload;
+import org.khalifa.multi_vendor_marketplace.modules.user.application.portal.UserRepository;
+import org.khalifa.multi_vendor_marketplace.modules.user.domain.User;
+import org.khalifa.multi_vendor_marketplace.modules.user.domain.factory.NewUserFactoryParams;
+import org.khalifa.multi_vendor_marketplace.modules.user.domain.factory.UserFactory;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

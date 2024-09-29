@@ -1,4 +1,4 @@
-package org.khalifa.multi_vendor_marketplace.modules.user.user.presenters.http.controller.dto;
+package org.khalifa.multi_vendor_marketplace.modules.user.presenter.http.controller.dto;
 
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
